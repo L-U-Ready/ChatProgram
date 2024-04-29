@@ -232,10 +232,10 @@ class ChatServerThread extends Thread {
     }
     public void whisper(String msg){
         int firstSpaceIndex = msg.indexOf(" ");
-        if (firstSpaceIndex == -1) return; //공백이 없다면....
+        if (firstSpaceIndex == -1) return; 
 
         int secondSpaceIndex = msg.indexOf(" ", firstSpaceIndex + 1);
-        if (secondSpaceIndex == -1) return; //두번재 공백이 없다는 것도 메시지가 잘못된거니까..
+        if (secondSpaceIndex == -1) return; 
 
         String to = msg.substring(firstSpaceIndex + 1, secondSpaceIndex);
         String message = msg.substring(secondSpaceIndex + 1);
